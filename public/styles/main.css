@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body,
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#inputText {
+  padding: 10px;
+  width:250px;
+  max-width: 350px;   
+}
+button {
+  padding: 5px;
+  cursor: pointer;
+}
+#output {
+  white-space: pre-wrap;
+  padding: 10px;
+  max-width: 400px;
+  min-width: 350px;
+  overflow-y: scroll;
+  overflow-wrap:break-word ;
+  height: 350px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.item {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 2px;
+}
+.wrg {
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: 800;
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  color:red;
+}
+.lr-btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+}
+.lr-ct{
+ cursor: pointer;
+ padding: 3px;
+ border:1px solid black; 
+ font-size: 16px;
+}
+main{
+  padding: 20px;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap:50px;
+}
+
+.ref-title{
+  color: #fff;
+}
+
+#plg-text{
+  padding: 10px;
+  max-width:500px;
+  min-width: 350px;
+  min-height: 200px;
+}
+.ref-container{
+  position: absolute;
+  background-color: #000;
+  opacity: 0.8;
+  width:100%;
+  height: 100%;
+}
+.ref-cont{
+  max-width: 300px;
+  margin: 10px;
+  border:1px solid #000;
+  padding: 10px;
+  border-radius: 3px;
+  max-height:50px;
+  overflow-y: scroll;
+}
+
+a{
+  text-align: center;
+  width: 100%;
+  display: inline;
+  text-decoration: none;
+}
+a.ref-bk{
+  color:#fff;
+}
+

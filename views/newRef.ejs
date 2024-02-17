@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+  <title>Create New Reference</title>
+</head>
+
+<body>
+  <form class="ref-container" method="post" action="/createNewRef">
+    <h1 class="ref-title">Create New Reference</h1>
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      name="title"
+      id="inputText"
+      placeholder="e.g. machine learning applications"
+      required
+    />
+    <label for="title">Authors:</label>
+    <input
+      type="text"
+      name="authors"
+      id="inputText"
+      placeholder="e.g. john howrd, benjamin frank"
+      required
+    />
+    <label for="title">Publish Year:</label>
+    <input
+      type="number"
+      min="1800"
+      max="2024"
+      name="published"
+      id="inputText"
+      placeholder=""
+      required
+    />
+    <label for="title">Article URL:</label>
+    <input
+      type="text"
+      name="pdf"
+      id="inputText"
+      placeholder="e.g. https://www.researchgate.net/publication/338685514_Machine_learning_and_its_applications_A_Review"
+      required
+    />
+    <label for="title">Reference Style:</label>
+    <select class="lr-ct" name="selectedRefCitationType" required>
+      <option value="apa" disabled selected>Reference Type</option>
+      <option value="apa">APA</option>
+      <option value="ieee">IEEE</option>
+      <option value="mla">MLA</option>
+      <option value="ama">AMA</option>
+      <option value="asa">ASA</option>
+      <option value="aaa">AAA</option>
+      <option value="apsa">APSA</option>
+      <option value="mhra">MHRA</option>
+      <option value="oscola">OSCOLA</option>
+    </select>
+    <button type="submit" name="button" value="more">Add More References</button>
+    <button type="submit" name="button" value="createRef">Finish</button>
+    <a  class="ref-bk" href="/">Back to home page</a>
+  </form>
+</body>

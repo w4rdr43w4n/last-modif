@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G6 Research Platform</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+  </head>
+  <body>
+    <main>
+      <form action="/search" method="post">
+        <input
+          type="text"
+          name="inputText"
+          id="inputText"
+          placeholder="Search..."
+          required
+        />
+        <div>
+          <button type="submit" name="button" value="arxiv">arXiv</button>
+          <button type="submit" name="button" value="archive">archive</button>
+          <button type="submit" name="button" value="semantic">
+            semantic scholar
+          </button>
+        </div>
+        <div id="output" name="output"><%- output %></div>
+      </form>
+      <% if(output != '') { %>
+      <form method="post" action="/lr">
+        <h2>Generate literature Review</h2>
+        <div class="lr-btns">
+          <select class="lr-ct" name="selectedCitationType">
+            <option value="apa" disabled selected>Citation Type</option>
+            <option value="apa">APA</option>
+            <option value="ieee">IEEE</option>
+            <option value="mla">MLA</option>
+            <option value="ama">AMA</option>
+            <option value="asa">ASA</option>
+            <option value="aaa">AAA</option>
+            <option value="apsa">APSA</option>
+            <option value="mhra">MHRA</option>
+            <option value="oscola">OSCOLA</option>
+          </select>
+          <button type="submit" name="button" value="LR">Generate</button>
+        </div>
+        <p id="output"><%- literature %></p>
+      </form>
+      <% } %>
+      <div class="tools">
+        <form method="post" action="/plg">
+          <h2>Plagiarism check</h2>
+          <textarea
+            type="text"
+            name="plgText"
+            id="plg-text"
+            placeholder="Paste text here to check for plagiarism content"
+            required
+          ></textarea>
+          <p class="plg-res"><%- plgRes %></p>
+          <button type="submit" name="button" value="plg">Check</button>
+        </form>
+        <div class="ref-cont">
+          <a href="NewRefpage">Create Custom References</a>
+          <p><%- ref %></p>
+        </div>
+        <div class="ref-cont">
+          <a href="Newliterpage">Create Custom literature</a>
+          <p><%- lr_ct %></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
